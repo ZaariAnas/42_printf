@@ -6,7 +6,7 @@
 #    By: azari <azari@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 20:39:15 by azari             #+#    #+#              #
-#    Updated: 2022/10/31 21:07:42 by azari            ###   ########.fr        #
+#    Updated: 2022/10/31 21:10:50 by azari            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,6 @@ all : ${NAME}
 
 ${NAME} : ${OFILES}
 	ar -crs ${NAME} ${OFILES}
-	
-bonus : ${BONUSO}
-	ar -crs ${NAME} ${BONUSO}
 
 %.o:%.c ft_printf.h
 	${CC} -c ${FLAGS} $<
@@ -33,6 +30,6 @@ clean :
 fclean : clean
 	rm -f ${NAME}
 
-re : fclean all bonus
+re : fclean all
 
 .PHONY: clean fclean re all

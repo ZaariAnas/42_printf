@@ -6,11 +6,13 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:28:48 by azari             #+#    #+#             */
-/*   Updated: 2022/10/31 19:41:32 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/31 21:12:35 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_printf(const char *str, ...)
+#include "ft_printf.h"
+
+void my_string(char c)
 {
-	
+	write(1, &c, 1);
 }
