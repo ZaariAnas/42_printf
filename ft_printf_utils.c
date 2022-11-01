@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:45:16 by azari             #+#    #+#             */
-/*   Updated: 2022/10/31 20:41:56 by azari            ###   ########.fr       */
+/*   Updated: 2022/11/01 17:21:04 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
-void	ft_putchar(int c)
+int	ft_putchar(int c)
 {
-	write(1, &c, 1);
+	int i;
+
+	i = write(1, &c, 1);
+	return (i);
 }
