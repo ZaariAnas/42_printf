@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 20:12:29 by azari             #+#    #+#             */
-/*   Updated: 2022/11/02 11:35:02 by azari            ###   ########.fr       */
+/*   Updated: 2022/11/02 15:08:28 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,30 +46,28 @@ int	ft_putstr(char *s)
 
 int	ft_putnbr_base_s(long long nbr, char *base)
 {
-	unsigned long long	number;
-	int					read;
+	int	read;
 
 	read = 0;
-	number = nbr;
 	if (nbr < 0)
 	{
 		read += ft_putchar('-');
-		number = -nbr;
+		nbr *= -1;
 	}
-	read += ft_putnbr_base_u(number, base);
+	read += ft_putnbr_base_u(nbr, base);
 	return (read);
 }
 
 int	ft_putnbr_base_u(unsigned long long nbr, char *base)
 {
-	unsigned long long	read;
-	unsigned long long	len;
+	unsigned long long	lenbase;
+	int					read;
 
-	len = ft_strlen(base);
+	lenbase = ft_strlen(base);
 	read = 0;
-	if (nbr >= len)
-		read += ft_putnbr_base_u(nbr / len, base);
-	write(1, &base[nbr % len], 1);
+	if (nbr >= lenbase)
+		read += ft_putnbr_base_u(nbr / lenbase, base);
+	write(1, &base[nbr % lenbase], 1);
 	read++;
 	return (read);
 }
