@@ -6,14 +6,14 @@
 #    By: azari <azari@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 20:39:15 by azari             #+#    #+#              #
-#    Updated: 2022/11/01 12:19:30 by azari            ###   ########.fr        #
+#    Updated: 2022/11/02 11:32:11 by azari            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC = cc
 FLAGS =  -Wall -Werror -Wextra
-CFILES = ft_printf.c ft_printf_utils.c ft_printf_printers.c 
+CFILES = ft_printf.c ft_printf_utils.c
 OFILES = ${CFILES:.c=.o}
 
 all : ${NAME}
