@@ -6,7 +6,7 @@
 #    By: azari <azari@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 20:39:15 by azari             #+#    #+#              #
-#    Updated: 2022/11/02 11:32:11 by azari            ###   ########.fr        #
+#    Updated: 2022/11/04 20:31:05 by azari            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ ${NAME} : ${OFILES}
 	${CC} -c ${FLAGS} $<
 
 clean :
-	rm -f ${OFILES} ${BONUSO}
+	rm -f ${OFILES}
 
 fclean : clean
 	rm -f ${NAME}

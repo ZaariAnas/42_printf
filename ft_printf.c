@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:28:48 by azari             #+#    #+#             */
-/*   Updated: 2022/11/02 11:39:44 by azari            ###   ########.fr       */
+/*   Updated: 2022/11/04 20:41:46 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,13 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[i] != '%')
 			read += ft_putchar(s[i]);
-		else if (s[i] == '%')
+		if (read < 0)
+			return (-1);
+		else if (s[i] == '%' && s[i + 1])
 		{
 			read += ft_convert(ptr, s[i + 1]);
+			if (read < 0)
+				return (-1);
 			i++;
 		}
 	}
